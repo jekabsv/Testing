@@ -25,6 +25,12 @@ using namespace ECS;
 // Example: a "move" system queries every entity that has both Pos and Vel,
 // and updates positions each frame. Entities that only have Pos are simply ignored.
 
+
+//This file contains some basic test cases for the ECS run in Debug,
+//as well as a simple example of how to use the ECS in a game loop with a simple console rendering after the test cases.
+
+
+//Unit tests compiled in Debug cofiguration
 #ifdef _DEBUG
 //var skaisti rakstīt testus šeit, palaist testus var kompilējot un palaižot programmu debug konfigurācijā
 
@@ -112,6 +118,8 @@ TEST_CASE("System performance", "[benchmark]") {
 
 #else
 
+//ECS example usage in a simple game loop with console rendering run in Release configuration
+
 
 //random
 std::mt19937 rng(std::random_device{}());
@@ -156,6 +164,7 @@ void Present(int cols, int rows) {
 }
 #else
 #endif
+
 
 
 //Shared data that will be available to each entity
